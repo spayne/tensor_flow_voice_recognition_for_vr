@@ -1,4 +1,4 @@
-## Why am I here today
+## Motivation / Project Purpose
 I'm interested in tensorflow and learning applications
 I'd like a fast response speech recognition for the Math Boxer game
 
