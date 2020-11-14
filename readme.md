@@ -37,7 +37,6 @@ Specifically 4.5 zip file install
 don't let it overwrite the display driver I'm using 460.20 because of wsl/docker with it's 456.81
 let it use default install directory of C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.1
 
-
 3. download and install cuDNN 8.0.4 from https://developer.nvidia.com/cudnn
 it comes down as a zip file:  cudnn-11.1-windows-x64-v8.0.4.30.zip
 
@@ -52,9 +51,28 @@ C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.1\bin
 fails to link cannot open cudnn.lib.  move libs from x64 of D:\tensorrt\TensorRT-7.2.1.6\lib\x64 to D:\tensorrt\TensorRT-7.2.1.6\lib
 
 
-## To run the basic models
-To run the models associated with [1], run the start_asr.sh then open a web browser to http://localhost:8888
+## To run the Domain Specific ASR
+We want to use this "Domain Specific ASR" example from [1] because we want to create our own ASR system.
 
-Then double click on WSJ_Domain_Specific_ASR.ipynb
+To run it: 
+1. source start_asr.sh.  Should start up and show logging.
+* Note that this script mounts this project directory to the container's /mounted folder
+
+2. open a web browser to http://localhost:8888.  Should startup and main jupyter notebook should be working on left hand side.  Right hand side dialogs 
+   are broken on windows because of a library that's missing on PC (nvidia has security concerns).
+3. Double click on WSJ_Domain_Specific_ASR.ipynb
+
+## To log into docker
+docker ps # get the container name
+docker exec -it <container name> /bin/bash
+
+## to stop the session
+docker ps # get the container name
+docker stop <container name>
+
+## Notes on using the vscode docker plugin
+To install from within VSCODE: ctrl+shift+x, search for docker, select install
+
+
 
 
