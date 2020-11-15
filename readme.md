@@ -64,14 +64,14 @@ To run it:
 
 ## To log into docker
 docker ps # get the container name
-docker exec -it <container name> /bin/bash
+docker exec -it --env DATA_DIR=$DATA_DIR <container name> /bin/bash
+
+cd /mounted to view this folder mounted in the container
 
 ## to stop the session
 docker ps # get the container name
 docker stop <container name>
 
-## Notes on using the vscode docker plugin
-To install from within VSCODE: ctrl+shift+x, search for docker, select install
 
 
 
