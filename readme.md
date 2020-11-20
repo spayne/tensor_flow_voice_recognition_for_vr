@@ -7,9 +7,13 @@ A dataflow diagram of the model building scripts/process:
 https://www.figma.com/file/v8Luqqm0WzLP2dPko37xXB/tensor-flow?node-id=0%3A1
 
 
-## Primary References
+## Primary Technology References
 NVidia Developer Blog on "How to build Domain Specific Automatic Speech Recognition Models on GPUs"
 [1] https://developer.nvidia.com/blog/how-to-build-domain-specific-automatic-speech-recognition-models-on-gpus/
+
+## Open Speech Corpora
+https://github.com/JRMeyer/open-speech-corpora
+
 
 ## Supplemental References
 [2] CUDA on WSL User Guide
@@ -54,7 +58,7 @@ fails to link cannot open cudnn.lib.  move libs from x64 of D:\tensorrt\TensorRT
 ## To run the Domain Specific ASR
 We want to use this "Domain Specific ASR" example from [1] because we want to create our own ASR system.
 
-To run it: 
+To start the docker instance and run this example:
 1. source start_asr.sh.  Should start up and show logging.
 * Note that this script mounts this project directory to the container's /mounted folder
 
