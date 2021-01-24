@@ -1,6 +1,5 @@
 ## Motivation / Project Purpose
-I'm interested in tensorflow and learning applications
-I'd like a fast response speech recognition for the Math Boxer game
+Use tensor flow to create a fast response speech recognition for the Math Boxer game
 
 ## Other documents related to this status
 A dataflow diagram of the model building scripts/process:
